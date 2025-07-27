@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="zh-CN">
+<html dir="ltr" lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="x-ua-compatible" content="IE=edge" />
@@ -44,7 +44,9 @@
 		
 		<div class="sidebar_left" id="tools_container"></div>
 
+
 		<div class="middle_area" id="middle_area">
+
 			<canvas class="ruler_left" id="ruler_left"></canvas>
 			<canvas class="ruler_top" id="ruler_top"></canvas>
 
@@ -54,7 +56,7 @@
 					<div class="transparent-grid" id="canvas_minipaint_background"></div>
 					<canvas id="canvas_minipaint">
 						<div class="trn error">
-							您的浏览器不支持 canvas 或未启用 JavaScript。
+							Your browser does not support canvas or JavaScript is not enabled.
 						</div>
 					</canvas>
 				</div>
@@ -63,49 +65,40 @@
 
 		<div class="sidebar_right">
 			<div class="preview block">
-				<h2 class="trn toggle" data-target="toggle_preview">预览</h2>
+				<h2 class="trn toggle" data-target="toggle_preview">Preview</h2>
 				<div id="toggle_preview"></div>
 			</div>
 			
 			<div class="colors block">
-				<h2 class="trn toggle" data-target="toggle_colors">颜色</h2>
+				<h2 class="trn toggle" data-target="toggle_colors">Colors</h2>
 				<div class="content" id="toggle_colors"></div>
 			</div>
 			
 			<div class="block" id="info_base">
-				<h2 class="trn toggle toggle-full" data-target="toggle_info">信息</h2>
+				<h2 class="trn toggle toggle-full" data-target="toggle_info">Information</h2>
 				<div class="content" id="toggle_info"></div>
 			</div>
 			
 			<div class="details block" id="details_base">
-				<h2 class="trn toggle toggle-full" data-target="toggle_details">图层详情</h2>
+				<h2 class="trn toggle toggle-full" data-target="toggle_details">Layer details</h2>
 				<div class="content details-content" id="toggle_details"></div>
 			</div>
 			
 			<div class="layers block">
-				<h2 class="trn">图层</h2>
+				<h2 class="trn">Layers</h2>
 				<div class="content" id="layers_base"></div>
 			</div>
 		</div>
 	</div>
-
 	<div class="mobile_menu">
 		<button class="left_mobile_menu" id="left_mobile_menu_button" type="button">
-			<span class="sr_only">切换菜单</span>
+			<span class="sr_only">Toggle Menu</span>
 		</button>
 		<button class="right_mobile_menu" id="mobile_menu_button" type="button">
-			<span class="sr_only">切换菜单</span>
+			<span class="sr_only">Toggle Menu</span>
 		</button>
 	</div>
-
 	<div class="hidden" id="tmp"></div>
 	<div id="popups"></div>
-
-	<!-- ✅ 初始化 miniPaint 并设置默认语言为简体中文 -->
-	<script type="text/javascript">
-		window.onload = function () {
-			App.init({ lang: 'zh-CN' });
-		};
-	</script>
 </body>
 </html>
