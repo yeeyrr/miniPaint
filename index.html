@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html dir="ltr" lang="zh-CN">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="x-ua-compatible" content="IE=edge" />
-	<title>miniPaint - image editor</title>
-	<meta name="description" content="miniPaint is free online image editor using HTML5. Edit, adjust your images, add effects online in your browser, without installing anything..." />
-	<meta name="keywords" content="photo, image, picture, transparent, layers, free, edit, html5, canvas, javascript, online, photoshop, gimp, effects, sharpen, blur, magic eraser tool, clone tool, rotate, resize, photoshop online, online tools, tilt shift, sprites, keypoints" />
+	<title>miniPaint - 图像编辑器</title>
+	<meta name="description" content="miniPaint 是一个基于 HTML5 的在线图像编辑器。您可以直接在浏览器中编辑图片，无需安装任何软件。" />
+	<meta name="keywords" content="图像, 图片, 编辑, 在线, photoshop, gimp, canvas, javascript, 透明, 图层, 滤镜" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
 	<link rel="icon" sizes="192x192" href="images/favicon.png">
 	<!-- <link rel="manifest" href="dist/manifest.json"> -->
 	<!-- Google -->
 	<meta itemprop="name" content="miniPaint" />
-	<meta itemprop="description" content="miniPaint is free online image editor using HTML5. Edit, adjust your images, add effects online in your browser, without installing anything..." />
+	<meta itemprop="description" content="miniPaint 是一个基于 HTML5 的在线图像编辑器。您可以直接在浏览器中编辑图片，无需安装任何软件。" />
 	<meta itemprop="image" content="https://viliusle.github.io/miniPaint/images/preview.jpg" />
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="miniPaint" />
-	<meta name="twitter:description" content="miniPaint is free online image editor using HTML5. Edit, adjust your images, add effects online in your browser, without installing anything..." />
+	<meta name="twitter:description" content="miniPaint 是一个基于 HTML5 的在线图像编辑器。您可以直接在浏览器中编辑图片，无需安装任何软件。" />
 	<meta name="twitter:image" content="https://viliusle.github.io/miniPaint/images/preview.jpg" />
-	<meta name="twitter:image:alt" content="miniPaint is free online image editor using HTML5. Edit, adjust your images, add effects online in your browser, without installing anything..." />
+	<meta name="twitter:image:alt" content="miniPaint 图片预览" />
 	<!-- Facebook, Pinterest -->
 	<meta property="og:title" content="miniPaint" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="https://viliusle.github.io/miniPaint/" />
 	<meta property="og:image" content="https://viliusle.github.io/miniPaint/images/preview.jpg" />
-	<meta property="og:description" content="miniPaint is free online image editor using HTML5. Edit, adjust your images, add effects online in your browser, without installing anything..." />
+	<meta property="og:description" content="miniPaint 是一个基于 HTML5 的在线图像编辑器。您可以直接在浏览器中编辑图片，无需安装任何软件。" />
 	<meta property="og:site_name" content="miniPaint" />
 	
 	<script src="dist/bundle.js"></script>
@@ -44,9 +44,7 @@
 		
 		<div class="sidebar_left" id="tools_container"></div>
 
-
 		<div class="middle_area" id="middle_area">
-
 			<canvas class="ruler_left" id="ruler_left"></canvas>
 			<canvas class="ruler_top" id="ruler_top"></canvas>
 
@@ -56,7 +54,7 @@
 					<div class="transparent-grid" id="canvas_minipaint_background"></div>
 					<canvas id="canvas_minipaint">
 						<div class="trn error">
-							Your browser does not support canvas or JavaScript is not enabled.
+							您的浏览器不支持 canvas 或未启用 JavaScript。
 						</div>
 					</canvas>
 				</div>
@@ -65,43 +63,45 @@
 
 		<div class="sidebar_right">
 			<div class="preview block">
-				<h2 class="trn toggle" data-target="toggle_preview">Preview</h2>
+				<h2 class="trn toggle" data-target="toggle_preview">预览</h2>
 				<div id="toggle_preview"></div>
 			</div>
 			
 			<div class="colors block">
-				<h2 class="trn toggle" data-target="toggle_colors">Colors</h2>
+				<h2 class="trn toggle" data-target="toggle_colors">颜色</h2>
 				<div class="content" id="toggle_colors"></div>
 			</div>
 			
 			<div class="block" id="info_base">
-				<h2 class="trn toggle toggle-full" data-target="toggle_info">Information</h2>
+				<h2 class="trn toggle toggle-full" data-target="toggle_info">信息</h2>
 				<div class="content" id="toggle_info"></div>
 			</div>
 			
 			<div class="details block" id="details_base">
-				<h2 class="trn toggle toggle-full" data-target="toggle_details">Layer details</h2>
+				<h2 class="trn toggle toggle-full" data-target="toggle_details">图层详情</h2>
 				<div class="content details-content" id="toggle_details"></div>
 			</div>
 			
 			<div class="layers block">
-				<h2 class="trn">Layers</h2>
+				<h2 class="trn">图层</h2>
 				<div class="content" id="layers_base"></div>
 			</div>
 		</div>
 	</div>
+
 	<div class="mobile_menu">
 		<button class="left_mobile_menu" id="left_mobile_menu_button" type="button">
-			<span class="sr_only">Toggle Menu</span>
+			<span class="sr_only">切换菜单</span>
 		</button>
 		<button class="right_mobile_menu" id="mobile_menu_button" type="button">
-			<span class="sr_only">Toggle Menu</span>
+			<span class="sr_only">切换菜单</span>
 		</button>
 	</div>
+
 	<div class="hidden" id="tmp"></div>
 	<div id="popups"></div>
 
-		<!-- 初始化 miniPaint，设置默认语言为中文 -->
+	<!-- ✅ 初始化 miniPaint 并设置默认语言为简体中文 -->
 	<script type="text/javascript">
 		window.onload = function () {
 			App.init({ lang: 'zh-CN' });
