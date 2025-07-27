@@ -639,9 +639,9 @@ const menuDefinition = [
 				name: 'Language',
 				children: [
 					{
-						name: 'English',
+						name: '简体中文',
 						target: 'tools/translate.translate',
-						parameter: 'en',
+						parameter: 'zh',
 					},
 					{
 						divider: true
@@ -654,9 +654,9 @@ const menuDefinition = [
 					},
 					{
 						//Chinese simplified
-						name: '简体中文',
+						name: 'English',
 						target: 'tools/translate.translate',
-						parameter: 'zh',
+						parameter: 'en',
 					},
 					{
 						name: 'Deutsch',
